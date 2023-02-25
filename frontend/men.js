@@ -43,6 +43,8 @@ function cart(elem,index){
 
 
 document.querySelector("#filter").addEventListener("change",myfilter)
+document.querySelector("#filterbyprice").addEventListener("change",filterit)
+
 
 function myfilter(){
   let selected = document.querySelector("#filter").value
@@ -80,4 +82,67 @@ async function lowtohigh(){
     let data = await responsedata.json()
     append(data)
    
+  }
+
+
+  function filterit(){
+    let selected = document.querySelector("#filterbyprice").value
+  let a;
+  let b;
+    if(selected == "0to50"){
+      a=0;
+      b=50;
+    }
+    if(selected =="50to100"){  
+    a = 50;
+    b = 100;
+    }
+    if(selected =="100to150"){
+    a = 100;
+    b = 150;
+    }
+    if(selected =="150to200"){
+    a = 150;
+    b = 200;
+    }
+  
+    filterfunc(a,b)
+  
+  
+  }
+  
+
+
+
+
+  async function filterfunc(a=0,b=200){
+   console.log(a,b)
+    let responsedata = await fetch(`http://localhost:8080/mens/filteredprice?price=${a}&price=${b}`)
+  
+    let data = await responsedata.json()
+    append(data)
+ 
+   
+  
+  }
+
+  async function cart(payload,index){
+    payload.quantity=1
+       
+  let responsedata = await fetch("http://localhost:8080/carts/addtocart",{
+
+  method:"POST",
+  headers:{
+    "Content-type":"application/json",
+    "Authorization":localStorage.getItem("token")
+  },
+  body:JSON.stringify(payload)
+  })
+
+    let data = await responsedata.json()
+  
+    alert(data.msg)
+    console.log(data)
+
+
   }

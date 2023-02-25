@@ -2,24 +2,16 @@
     margin: 0px;
     padding:0px;
 }
-#main{
-      display:flex;
-      margin:auto;
-
-}
-#main>div:nth-child(1){
-    width:20%
-}
-#main>div:nth-child(2){
-    width:80%
-}
 
 #main-container{
     /* border:2px solid red; */
+    width:90%;
+    margin:auto;
+    border:2px solid red;
     display:grid;
     grid-template-columns: repeat(3,1fr);
    
-    column-gap: 10px;
+    column-gap: 20px;
     row-gap: 20px;
     
 }
@@ -27,6 +19,7 @@
     border-radius: 14px;
     width:90%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin:auto;
 
 }
 #main-container img{ 
@@ -47,7 +40,20 @@
     margin-left: 5px;
     margin-top: 5px ;
 }
-#main-container button{
+
+
+#main-container h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 5px;
+    
+}
+
+
+
+
+
+
+/* #main-container button{
     font-weight: 500;
     font-size: 15px;
     background-color:black ;
@@ -59,27 +65,22 @@
     margin:auto;
     margin-top: 4px;
     margin-bottom: 8px;
-}
+} 
 #main-container button:hover{
    background-color:  red;
    cursor: pointer;
 }
-#main-container>div:hover{
+ #main-container>div:hover{
     border-radius: 14px;
     width:90%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     
   
-}
-
-#main-container h3{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 5px;
-    
-}
+} */
 
 
-#ban{
+
+/* #ban{
     width:100%;
     margin-bottom: 12px;
 }
@@ -87,25 +88,4 @@
     width:100%;
     display:block;
     margin:auto;
-}
-
-#sort>div{
-    margin-top: 13px;
-
-}
-#sort span{
-    font-weight: 600;
-    font-size:23px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-}
-#sort select,option{
-  font-size:15px;
-  font-weight:600;
-  border:2px solid black
-}
-
-#sort1 select{
-    font-size: 16px;
-/* border:10px solid red */
-}
+} */
