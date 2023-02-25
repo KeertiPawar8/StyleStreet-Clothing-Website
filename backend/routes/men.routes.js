@@ -24,7 +24,16 @@ menRouter.get("/getbyprice",async(req,res)=>{
     })
     
     
+    menRouter.get("/filteredprice",async(req,res)=>{
+        console.log(req.query)
+        let [ab,bb] =req.query.price
+        let a = +ab
+        let b = +bb
 
+        let data = await MenModel.find({$and:[{price:{$gte:a}},{price:{$lte:b}}]})
+            res.send(data)
+
+        })
 
 module.exports = {
    menRouter,
