@@ -146,3 +146,19 @@ async function lowtohigh(){
 
 
   }
+
+
+
+
+
+  
+  document.querySelector("#cart").addEventListener("click",opencart)
+
+  function opencart(){
+    window.location.href = "./cart.html"
+  }
+
+  document.querySelector("#mens").addEventListener("click",openmens)
+
+  function openmens(){
+    window.location.href = "./men.html"}
