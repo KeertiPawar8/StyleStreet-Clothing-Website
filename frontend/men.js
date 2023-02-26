@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
 
 async function appenddata() {
   try {
-    let responsedata = await fetch("http://localhost:8080/mens/get");
+    let responsedata = await fetch("https://outrageous-cyan-overcoat.cyclic.app/mens/get");
 
     let data = await responsedata.json();
     let datatoappend = data;
@@ -67,7 +67,7 @@ function myfilter(){
 
 async function lowtohigh(){
   
-    let responsedata = await fetch("http://localhost:8080/mens/getbyprice?price=1")
+    let responsedata = await fetch("https://outrageous-cyan-overcoat.cyclic.app/mens/getbyprice?price=1")
   
     let data = await responsedata.json()
     append(data)
@@ -77,7 +77,7 @@ async function lowtohigh(){
   
   
   async function hightolow(){
-    let responsedata = await fetch("http://localhost:8080/mens/getbyprice?price=-1")
+    let responsedata = await fetch("https://outrageous-cyan-overcoat.cyclic.app/mens/getbyprice?price=-1")
   
     let data = await responsedata.json()
     append(data)
@@ -117,7 +117,7 @@ async function lowtohigh(){
 
   async function filterfunc(a=0,b=200){
    console.log(a,b)
-    let responsedata = await fetch(`http://localhost:8080/mens/filteredprice?price=${a}&price=${b}`)
+    let responsedata = await fetch(`https://outrageous-cyan-overcoat.cyclic.app/mens/filteredprice?price=${a}&price=${b}`)
   
     let data = await responsedata.json()
     append(data)
@@ -129,7 +129,7 @@ async function lowtohigh(){
   async function cart(payload,index){
     payload.quantity=1
        
-  let responsedata = await fetch("http://localhost:8080/carts/addtocart",{
+  let responsedata = await fetch("https://outrageous-cyan-overcoat.cyclic.app/carts/addtocart",{
 
   method:"POST",
   headers:{
