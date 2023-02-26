@@ -95,8 +95,9 @@ cartRouter.patch("/inc/:id", async (req, res) => {
 cartRouter.delete("/delete/:id", async (req, res) => {
     const id = req.params.id
     await CartModel.findByIdAndDelete({ _id: id });
-    res.send({"msg":"Cart Product has been deleted"})
+    res.send({"msg":"Product has been deleted"})
 })
+
 
 
 module.exports = {
