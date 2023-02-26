@@ -39,7 +39,7 @@ function submitfunc() {
 }
 
 function loginfunc(payload) {
-  fetch("http://localhost:8080/users/login", {
+  fetch("https://outrageous-cyan-overcoat.cyclic.app/users/login", {
     method: "POST",
     headers: {
       "Content-type": "application/json",

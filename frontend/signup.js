@@ -19,7 +19,7 @@ async function getUserData(event) {
   ) {
     alert("Please fill all fields");
   } else {
-    let responsedata = await fetch("http://localhost:8080/users/register", {
+    let responsedata = await fetch("https://outrageous-cyan-overcoat.cyclic.app/users/register", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

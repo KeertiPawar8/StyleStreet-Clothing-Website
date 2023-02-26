@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
 
   async function appenddata() {
     try {
-      let responsedata = await fetch("http://localhost:8080/carts/get",{
+      let responsedata = await fetch("https://outrageous-cyan-overcoat.cyclic.app/carts/get",{
         headers:{
             "Authorization":localStorage.getItem("token")
         }
@@ -77,7 +77,7 @@ window.addEventListener("load", () => {
 
   async function decrement(id){
         console.log(id)
-    let responsedata = await fetch(`http://localhost:8080/carts/dec/${id}`,{
+    let responsedata = await fetch(`https://outrageous-cyan-overcoat.cyclic.app/carts/dec/${id}`,{
         method:"PATCH",
         headers: {
             "Authorization":localStorage.getItem("token")
@@ -97,7 +97,7 @@ window.addEventListener("load", () => {
 
   async function increment(id){
     console.log(id)
-let responsedata = await fetch(`http://localhost:8080/carts/inc/${id}`,{
+let responsedata = await fetch(`https://outrageous-cyan-overcoat.cyclic.app/carts/inc/${id}`,{
     method:"PATCH",
     headers: {
         "Authorization":localStorage.getItem("token")
@@ -116,7 +116,7 @@ window.location.reload()
 
 async function removed(id){
 
-    let responsedata = await fetch(`http://localhost:8080/carts/delete/${id}`,{
+    let responsedata = await fetch(`https://outrageous-cyan-overcoat.cyclic.app/carts/delete/${id}`,{
         method:"DELETE",
         headers: {
             "Authorization":localStorage.getItem("token")
