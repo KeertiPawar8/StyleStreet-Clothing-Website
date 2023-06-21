@@ -121,9 +121,7 @@ async function lowtohigh(){
   
     let data = await responsedata.json()
     append(data)
- 
-   
-  
+    
   }
 
   async function cart(payload,index){
