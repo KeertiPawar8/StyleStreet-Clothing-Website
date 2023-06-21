@@ -11,7 +11,7 @@ menRouter.post("/create",async(req,res)=>{
 })
 
 menRouter.get("/get",async(req,res)=>{
-  
+    
 let data = await MenModel.find()
     res.send(data)
 })
